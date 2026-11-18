@@ -7,28 +7,87 @@
     <link rel="stylesheet" href="grid.css">
 </head>
 <body>
-    <header>header</header>
-    
-    <nav>
-        
-    </nav>
-    
-    <aside></aside>
+    <header>
+        <div class="logo">Leif Mikel Steinsland</div>
+        <nav>
+            <a href="#hjem">Hjem</a>
+            <a href="#om-meg">Om meg</a>
+            <a href="#prosjekter">Prosjekter</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
 
- <hero> <img src="Bilder/Bilde av vann.webp" alt="Bilde av vann">
-<img src="Bilder/skrekk bilde.jpg" alt="redigert skrekk bilde"> 
-<img src="Bilder/Skrekk bilde med punch.jpg" alt="skrekk bilde som slåss"></hero>
+    <aside id="min-aside">
+        <button id="aside-knapp" aria-label="Åpne sidepanel">◀</button>
+        <h2>Sidepanel</h2>
+        <p>Her er innholdet i aside.</p>
+    </aside>
 
     <main>
-        <p>Jeg heter Mikel og jeg lærer programmering, fotografering og fotoredigering.
-            Jeg holder på å lære hvordan man bruker forskjellige adobe apper for fotoredigeringen,
-            og innenfor programmering så har jeg lært om databaser, litt om javaskript, og holder på med HTML og css
-        </p>
         
+        <section id="hjem" class="side-seksjon">
+            <div class="tekstboks">
+                <h2>Introdusering</h2>
+                <p>Jeg heter Mikel og jeg er en elev på Amalie Skram vgs som lærer programmering, fotografering og fotoredigering.
+                Jeg holder på å lære hvordan man bruker forskjellige Adobe-apper for fotoredigeringen,
+                og innenfor programmering så har jeg lært om databaser, litt om JavaScript, og holder på med HTML og CSS.</p>
+            </div>
+        </section>
+
+        
+        <section id="om-meg" class="side-seksjon">
+            <div class="tekstboks">
+                <h2>Om meg</h2>
+                <p> ting om meg</p>
+            </div>
+        </section>
+
+       
+        <section id="prosjekter" class="side-seksjon">
+            <div class="tekstboks">
+                <h2>Mine prosjekter</h2>
+                <p>Her er noen av bildene og nettsidene jeg har jobbet med:</p>
+            </div>
+            
+            <div class="kort-liste">
+                <div class="kort">
+                    <div class="kort-tekst">
+                        <h3>Fotoprosjekt 1</h3>
+                        <p>Beskrivelse av et bilde eller redigering i Adobe.</p>
+                    </div>
+                </div>
+                <div class="kort">
+                    <div class="kort-tekst">
+                        <h3>Flere prosjekter</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="kontakt" class="side-seksjon">
+            <div class="tekstboks">
+                <h2>Kontakt meg</h2>
+                <p>Ta gjerne kontakt hvis du lurer på noe!</p>
+                <p>E-post: leif.mikel@gmail.com </p>
+                <p>Telefon nummer: 405 31 572</p>
+            </div>
+        </section>
     </main>
 
     <footer>
         footer
     </footer>
+
+    <script>
+        const aside = document.getElementById("min-aside");
+        const knapp = document.getElementById("aside-knapp");
+
+        knapp.addEventListener("click", () => {
+            aside.classList.toggle("apen");
+            knapp.textContent = aside.classList.contains("apen") ? "▶" : "◀";
+        });
+    </script>
 </body>
 </html>
